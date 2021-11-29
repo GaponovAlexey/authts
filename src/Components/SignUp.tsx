@@ -1,9 +1,9 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { setUser } from 'store/userSlice'
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth'
 import { Form } from './Form'
 import { useLocation, useNavigate } from 'react-router'
+import { setUser } from '../store/userSlice'
 // import { us } from 'react-router-dom'
 
 

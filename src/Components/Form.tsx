@@ -1,6 +1,11 @@
-import React, { useState } from 'react'
+import { FC, useState } from 'react'
 
-export const Form = ({ title, handleClick }) => {
+interface FormProps {
+  title: string
+  handleClick: (email: string, password: string) => void
+}
+
+export const Form: FC<FormProps> = ({ title, handleClick }) => {
   const [email, setEmail] = useState('')
   const [password, setPass] = useState('')
   return (
@@ -18,7 +23,7 @@ export const Form = ({ title, handleClick }) => {
         placeholder='password'
       />
       <div>
-        <button onClick={() =>handleClick(email, password)}>{title}</button>
+        <button onClick={() => handleClick(email, password)}>{title}</button>
       </div>
     </div>
   )
