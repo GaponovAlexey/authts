@@ -1,13 +1,14 @@
-import { useAuth } from 'hook/use-auth'
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { removeUser } from 'store/userSlice'
+import { useAppDispatch } from '../hook/redux-hooks'
+import { useAuth } from '../hook/use-auth'
+import { removeUser } from '../store/userSlice'
 import { LoginPage } from './LoginPage'
 
 export const HomePage = () => {
-  const { isAuth, email, id, token } = useAuth()
-  const dispatch = useDispatch()
+  const { isAuth, email } = useAuth()
+  const dispatch = useAppDispatch()
   return (
     <div>
       {!isAuth ? (
