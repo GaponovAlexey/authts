@@ -1,4 +1,4 @@
-import { getAuth } from 'firebase/auth';
+import { getAuth } from 'firebase/auth'
 import { configureStore } from '@reduxjs/toolkit'
 import userReduser from './userSlice'
 
